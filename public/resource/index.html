@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Pessico</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<section class="sec">
+		<header>
+			<a href="#"><img src="images/logo.png" class="logo"></a>
+			<div class="toggleMenu" onclick="menuToggle();">
+				<ul class="navigation">
+					<li><a href="#" data-text="Home">		Home		</a></li>
+					<li><a href="#" data-text="Products">	Products 	</a></li>
+					<li><a href="#" data-text="What's new">	What's new 	</a></li>
+					<li><a href="#" data-text="Newsletter">	Newsletter 	</a></li>
+					<li><a href="#" data-text="Contact">	Contact		</a></li>
+				</ul>
+			</div>
+		</header>
+		<div class="content">
+			<div class="textBox">
+				<h2>What's new<br><span>I like</span></h2>
+				<p>Have you ever seen a web animation on codepen or on any website and then you think “Ohh that is awesome! I want to do that!” but then think it’s complex and far beyond your skills?Well I’m here to tell you: No, it definitely is not!</p>
+				<a href="#">View all products</a>
+			</div>
+			<div class="imgBox">
+				<img src="images/pepsi001.png" class="pessi">
+			</div>
+		</div>
+		<ul class="thumb">
+			<li><img src="images/pepsi001.png" onclick="imgSlider('images/pepsi001.png');ChangeBgColor('#0062be');"></li>
+			<li><img src="images/pepsi002.png" onclick="imgSlider('images/pepsi002.png');ChangeBgColor('#e60c2c');"></li>
+			<li><img src="images/pepsi003.png" onclick="imgSlider('images/pepsi003.png');ChangeBgColor('#1e1e1e');"></li>
+		</ul>
+		<ul class="sci">
+			<li><a href="https://facebook.com/trinhsydu/"><img src="images/facebook.png"></a></li>
+			<li><a href="https://instagram.com/trinh_sy_du/"><img src="images/instagram.png"></a></li>
+			<li><a href="https://twitter.com/quancaynho/"><img src="images/twitter.png"></a></li>
+		</ul>
+	</section>
+	<script type="text/javascript">
+		function imgSlider(linkanh){
+			document.querySelector('.pessi').src = linkanh;
+		}
+		function ChangeBgColor(color){
+			const sec = document.querySelector('.sec');
+			sec.style.background= color;
+		}
+		function menuToggle(){
+			const toggleMenu = document.querySelector('.toggleMenu');
+			const navigation = document.querySelector('.navigation');
+			toggleMenu.classList.toggle('active');
+			navigation.classList.toggle('active');
+		}
+	</script>
+</body>
+</html>
